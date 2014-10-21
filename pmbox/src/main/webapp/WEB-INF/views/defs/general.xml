@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+  <definition name="index" template="/WEB-INF/views/layouts/indexClassic.jsp">
+    <put-attribute name="title" value="Log In" />
+  	<put-attribute name="header" value="/WEB-INF/views/layouts/header.jsp" />
+    <put-attribute name="body" value="/WEB-INF/views/index.jsp" />
+  </definition>
+  
+  <definition name="classic" template="/WEB-INF/views/layouts/classic.jsp">
+  	<put-attribute name="header" value="/WEB-INF/views/layouts/header.jsp" />   	      
+  	<put-attribute name="menu" value="/WEB-INF/views/layouts/userMenu.jsp" />  
+    <put-attribute name="footer" value="/WEB-INF/views/layouts/footer.jsp" />
+  </definition>
+  
+  <definition name="admintemplate" template="/WEB-INF/views/layouts/classic.jsp">
+  	<put-attribute name="header" value="/WEB-INF/views/layouts/header.jsp" />   	      
+  	<put-attribute name="menu" value="/WEB-INF/views/layouts/adminMenu.jsp" /> 
+    <put-attribute name="footer" value="/WEB-INF/views/layouts/footer.jsp" />
+  </definition>
+  
+  <definition name="error" template="/WEB-INF/views/layouts/error.jsp"> 
+  <put-attribute name="title" value="Error" />
+  	<put-attribute name="header" value="/WEB-INF/views/layouts/header.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/views/layouts/footer.jsp" />
+  </definition>
+
+  <definition name="adminHome" extends="admintemplate">
+    <put-attribute name="title" value="Admin Home" />
+    <put-attribute name="body" value="/WEB-INF/views/adminHome.jsp" />
+  </definition>
+
+  <definition name="createAccount" extends="admintemplate">
+    <put-attribute name="title" value="Admin Home" />
+    <put-attribute name="body" value="/WEB-INF/views/createAccount.jsp" />
+  </definition> 
+  
+  <definition name="adminRequests" extends="admintemplate">
+    <put-attribute name="title" value="Requests Handle" />
+    <put-attribute name="body" value="/WEB-INF/views/adminRequests.jsp" />
+  </definition>
+  
+  <definition name="userHome" extends="classic">
+    <put-attribute name="title" value="User Home" />
+    <put-attribute name="body" value="/WEB-INF/views/userHome.jsp" />
+  </definition>
+  
+  <definition name="adminprojectHome" extends="classic">
+    <put-attribute name="title" value="project Home" /> 
+    <put-attribute name="body" value="/WEB-INF/views/projectadmin.jsp" />
+  </definition>
+  
+  <definition name="userRequests" extends="classic">
+    <put-attribute name="title" value="Requests Handle" />
+    <put-attribute name="body" value="/WEB-INF/views/userRequests.jsp" />
+  </definition>
+  
+  <definition name="calendar" extends="classic">
+  	<put-attribute name="header" value="/WEB-INF/views/layouts/calendarheader.jsp" />   
+    <put-attribute name="title" value="Calendar" />
+    <put-attribute name="body" value="/WEB-INF/views/calendar.jsp" />
+  </definition>
+  
+  <definition name="memberprojectHome" extends="classic">
+    <put-attribute name="title" value="project Home" /> 
+    <put-attribute name="body" value="/WEB-INF/views/projectmember.jsp" />
+  </definition>
+  <definition name="clientprojectHome" extends="classic">
+    <put-attribute name="title" value="project Home" /> 
+    <put-attribute name="body" value="/WEB-INF/views/projectclient.jsp" />
+  </definition>
+  
+  <definition name="todo" extends="classic">
+    <put-attribute name="title" value="To Do" />
+    <put-attribute name="body" value="/WEB-INF/views/todo.jsp" />
+  </definition>
+  
+  <definition name="todoClient" extends="classic">
+    <put-attribute name="title" value="To Do" />
+    <put-attribute name="body" value="/WEB-INF/views/todoclient.jsp" />
+  </definition>
+  
+  <definition name="ajaxresult" template="/WEB-INF/views/ajaxresult.jsp">
+  </definition>
+  
+  <definition name="ajaxRequest" template="/WEB-INF/views/ajaxRequest.jsp">
+  </definition>
+  
+  <definition name="ajaxAddProjectUserResult" template="/WEB-INF/views/ajaxAddProjectUserResult.jsp">
+  </definition>
+  
+  <definition name="document" extends="classic">
+    <put-attribute name="title" value="Document Management" />
+    <put-attribute name="body" value="/WEB-INF/views/document.jsp" />
+  </definition>
+  
+  <definition name="documentEdit" extends="classic">
+    <put-attribute name="title" value="Document Management" />
+    <put-attribute name="body" value="/WEB-INF/views/documentEdit.jsp" />
+  </definition>
+  
+  <definition name="userFile" extends="classic">
+    <put-attribute name="title" value="File Management" />
+    <put-attribute name="body" value="/WEB-INF/views/userFile.jsp" />
+  </definition>
+      
+</tiles-definitions>
